@@ -35,9 +35,12 @@
     const fifteen = inventors.filter(function(inventor) {
         if(inventor.year >= 1500 && inventor.year <= 1600) {
             return true; // keep it!
-            // no need to return false here, we just want to keep it
+            // no need to return false here, we just want to return true and keep it
         }
     });
+
+    // console.table adds info to a table, easy reading
+    console.table(fifteen);
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
