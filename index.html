@@ -110,8 +110,18 @@
     // in console, use dev tools, inspect what contains that text, which is .mw-category
     const category = document.querySelector('.mw-category');
     // find the links within that category, look inside that element
-    const links = category.querySelector('a');
-    
+    // here, Array.from converts our node list to an array, that's ONE option:
+    const links = Array.from(category.querySelectorAll('a'));
+
+    // alternatively, we can
+    // const links = Array.from(category.querySelectorAll('a'));
+
+    // gives us just the text inside the link
+    // querySelector returns a node list
+    // map isn't include in a node list
+    // we have to change this into an array
+    const de = links.map(link => link.textContent);
+
 
 
 
