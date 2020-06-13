@@ -132,15 +132,30 @@
         // this gives up last name, but we want first name and last name
         // but this splits on the comma and a space
         // but now let's destructure - rather than return an array, let's put them into their own variables right away
-        const [alast, afirst] = lastOne.split(', ');
-        const [blast, bfirst] = nextOne.split(', ');
-        console.log(last, first)
+        const [aLast, aFirst] = lastOne.split(', ');
+        const [bLast, bFirst] = nextOne.split(', ');
+        return aLast > bLast ? 1 : -1;
     });
+    console.log(alpha);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+    const transportation = data.reduce(function(obj, item) {
+        if(!obj[item]) {
+            obj[item] = 0;
+        }
+        obj[item]++;
+        return obj;
+    }, {
+        // start with a blank object
+        // every time we loop over one, we first see if there's a 0 there to work with at all
+        // THEN and only then we increment it
+        // car: 0,
+        // walk: 0,
+        // truck: 0
+    });
   </script>
 </body>
 </html>
