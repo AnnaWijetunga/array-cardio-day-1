@@ -129,7 +129,12 @@
     // Sort the people alphabetically by last name
     // now we're working with people, not inventors
     const alpha = people.sort(function(lastOne, nextOne) {
-        console.log(lastOne)
+        // this gives up last name, but we want first name and last name
+        // but this splits on the comma and a space
+        // but now let's destructure - rather than return an array, let's put them into their own variables right away
+        const [alast, afirst] = lastOne.split(', ');
+        const [blast, bfirst] = nextOne.split(', ');
+        console.log(last, first)
     });
 
     // 8. Reduce Exercise
