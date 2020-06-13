@@ -103,12 +103,17 @@
         // clean it up: use ternary operator
         return lastGuy > nextGuy ? -1 : 1;
     });
-    console.log(oldest);
-
-    })
+    console.table(oldest);
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+    // in console, use dev tools, inspect what contains that text, which is .mw-category
+    const category = document.querySelector('.mw-category');
+    // find the links within that category, look inside that element
+    const links = category.querySelector('a');
+    
+
+
 
 
     // 7. sort Exercise
