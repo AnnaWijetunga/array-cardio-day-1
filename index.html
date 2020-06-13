@@ -48,6 +48,13 @@
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
+    // what does map do?
+    // map takes in a raw material, stamp it, and kick out that item on the other end
+    // map takes in an array, does somethign with it, then returns a new array but of the same length
+    // map will always return the same amount of items as you give it
+    const fullNames = inventors.map(inventor => inventor.first + inventor.last);
+    console.log(fullNames); // but there's no space between first and last name here
+
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
