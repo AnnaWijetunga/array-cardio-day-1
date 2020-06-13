@@ -80,8 +80,31 @@
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
+    // reduce allows you to build something on every single one
+    // cleaner way to do this
+    // reduce gives you a running total, what you've returned from the function last time and also the inventor
+    const totalYears = inventors.reduce((total, inventor) => {
+        return total + (inventor.passed - inventor.year);
+    }, 0);
+
+    console.log(totalYears);
+    // that first loop around, there isn't a total, it's undefined, so let's add the 0 in
+
 
     // 5. Sort the inventors by years lived
+    const oldest = inventors.sort(function(a, b) {
+        const lastGuy = a.passed - a.year;
+        const nextGuy = b.passed - b.year;
+        // if(last.guy > nextGuy) {
+        //     return -1;
+        // } else {
+        //     return 1;
+        // };  
+        // clean it up:
+        
+    }
+
+    })
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
