@@ -61,12 +61,17 @@
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
     // you get two items, you are asked just to sort those two
-    // return 1 and -1
+    // return 1 and -1, bubbles up and down
     // a = first person, b = second person
-    const ordered = inventors.sorrt(function(a, b) {
-
-
+    const ordered = inventors.sort(function(a, b) {
+        if(a.year > b.year) {
+            return 1;
+        } else {
+            return -1;
+        }
     });
+
+    console.table(ordered)
 
 
 
